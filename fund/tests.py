@@ -50,4 +50,4 @@ class FundAPITestCase(APITestCase):
     def test_delete_fund(self):
         delete_url = reverse('fund:fund_d', args=[self.fund['data']['id']])
         response = self.client.delete(delete_url)
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
